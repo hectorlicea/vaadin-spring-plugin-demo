@@ -1,0 +1,12 @@
+.idea
+*.iml
+.project
+.settings
+.classpath
+target
+nb*.xml
+nb-configuration.xml
+nbactions.xml
+dependency-reduced-pom.xmlpom.xml.versionsBackup
+*.versionsBackup
+*dependency-reduced-pom.xml
