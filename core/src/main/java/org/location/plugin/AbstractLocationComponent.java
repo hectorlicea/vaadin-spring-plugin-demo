@@ -1,18 +1,17 @@
-package org.weather.plugin;
+package org.location.plugin;
 
-import com.vaadin.icons.VaadinIcons;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
-import org.weather.data.WeatherData;
+import org.location.data.LocationData;
 
-public abstract class AbstractWeatherComponent extends VerticalLayout implements WeatherComponent {
+public abstract class AbstractLocationComponent extends VerticalLayout implements LocationComponent {
 
     private Label locationName;
     private Label latitude;
     private Label longitude;
 
-    public AbstractWeatherComponent(){
+    public AbstractLocationComponent(){
         setMargin(false);
         addStyleName(ValoTheme.LAYOUT_CARD);
         setWidth("200px");
@@ -52,7 +51,7 @@ public abstract class AbstractWeatherComponent extends VerticalLayout implements
 
 
     @Override
-    public void setWeatherData(WeatherData data) {
+    public void setLocationData(LocationData data) {
 
     }
 }

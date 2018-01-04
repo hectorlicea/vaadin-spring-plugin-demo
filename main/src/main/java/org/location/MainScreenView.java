@@ -1,13 +1,13 @@
-package org.weather;
+package org.location;
 
 import com.vaadin.navigator.View;
 import com.vaadin.spring.annotation.SpringComponent;
 import com.vaadin.spring.annotation.UIScope;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.VerticalLayout;
-import org.weather.plugin.WeatherPlugin;
-import org.weather.data.WeatherData;
-import org.weather.service.WeatherService;
+import org.location.plugin.LocationPlugin;
+import org.location.data.LocationData;
+import org.location.service.LocationsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.plugin.core.PluginRegistry;
 
@@ -20,18 +20,13 @@ import javax.annotation.PostConstruct;
 @SpringComponent
 public class MainScreenView extends VerticalLayout implements View {
 
-	private final CssLayout menuArea = new CssLayout();
-
-
-	@Autowired
-	private PluginRegistry<WeatherPlugin, String> registry;//Plugins registry
+	private LocationsService service;
+	private PluginRegistry<LocationPlugin, String> registry;//Plugins registry
 
 	@Autowired
-	private WeatherService service;
-
-
-	public MainScreenView() {
-
+	public MainScreenView( LocationsService service, PluginRegistry<LocationPlugin, String> registry) {
+		this.service = service;
+		this.registry = registry;
 	}
 
 	@PostConstruct
@@ -44,11 +39,11 @@ public class MainScreenView extends VerticalLayout implements View {
 		content.setWidth("100%");
 		addComponent(content);
 
-		//Read all measurements
-		for (WeatherData dto: service.loadWeatherData()){
-			// Get the plugin by the measurement type.
-			// If not exists plugin for this type, the registry return an instance of DefaultMeasurementPlugin
-			WeatherPlugin mc = registry.getPluginFor(dto.getType(), new DefaultPlugin());
+		//Read all locations
+		for (LocationData dto: service.loadLocationsData()){
+			// Get the plugin by the weather type.
+			// If not exists plugin for this type, the registry return an instance of DefaultPlugin
+			LocationPlugin mc = registry.getPluginFor(dto.getType(), new DefaultPlugin());
 			// Add component to UI
 			content.addComponent(mc.getComponent(dto));
 		}

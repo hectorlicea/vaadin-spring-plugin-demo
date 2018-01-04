@@ -1,10 +1,8 @@
-package org.weather;
+package org.location;
 
 import com.vaadin.spring.annotation.EnableVaadin;
-import org.weather.plugin.WeatherPlugin;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.plugin.core.config.EnablePluginRegistries;
 
 /**
  * Application

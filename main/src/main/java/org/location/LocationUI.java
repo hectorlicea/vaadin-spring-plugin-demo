@@ -1,4 +1,4 @@
-package org.weather;
+package org.location;
 
 import javax.servlet.annotation.WebServlet;
 
@@ -17,13 +17,12 @@ import org.springframework.beans.factory.annotation.Autowired;
  * overridden to add component to the user interface and initialize non-component functionality.
  */
 @SpringUI
-//@Theme("weathertheme")
-public class WeathertUI extends UI {
+public class LocationUI extends UI {
 
     private Component content;
 
     @Autowired
-    public WeathertUI(MainScreenView content){
+    public LocationUI(MainScreenView content){
         this.content = content;
     }
 
@@ -33,7 +32,7 @@ public class WeathertUI extends UI {
     }
 
     @WebServlet(urlPatterns = "/*", name = "WeatherUIServlet", asyncSupported = true)
-    @VaadinServletConfiguration(ui = WeathertUI.class, productionMode = false)
+    @VaadinServletConfiguration(ui = LocationUI.class, productionMode = false)
     public static class MeasurementUIServlet extends VaadinServlet {
     }
 }

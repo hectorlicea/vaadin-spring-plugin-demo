@@ -1,14 +1,14 @@
-package org.weather.data;
+package org.location.data;
 
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Weather data
+ * Location data
  */
 @Getter
 @Setter
-public class WeatherData {
+public class LocationData {
     private String location;
     private Double latitude;
     private Double longitude;
@@ -17,11 +17,11 @@ public class WeatherData {
     private Double min;
     private Double max;
 
-    public WeatherData(String location, Double latitude, Double longitude, String type, Double value){
+    public LocationData(String location, Double latitude, Double longitude, String type, Double value){
         this(location, latitude, longitude, type, value, null, null);
     }
 
-    public WeatherData(String location, Double latitude, Double longitude, String type, Double value, Double min, Double max){
+    public LocationData(String location, Double latitude, Double longitude, String type, Double value, Double min, Double max){
         this.location = location;
         this.latitude = latitude;
         this.longitude = longitude;

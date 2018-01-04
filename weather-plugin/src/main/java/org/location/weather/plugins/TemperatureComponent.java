@@ -1,23 +1,23 @@
-package org.weather.plugins;
+package org.location.weather.plugins;
 
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.spring.annotation.SpringComponent;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
-import org.weather.plugin.AbstractWeatherComponent;
-import org.weather.plugin.WeatherComponent;
-import org.weather.data.WeatherData;
+import org.location.plugin.AbstractLocationComponent;
+import org.location.plugin.LocationComponent;
+import org.location.data.LocationData;
 import org.springframework.context.annotation.Scope;
 
 /**
- * {@link WeatherComponent} implementation to show 'temperature' measurement data.
+ * {@link LocationComponent} implementation to show 'temperature' weather data.
  * Defined as @SpringComponent and scope 'prototype'.
  * Scopes a single bean definition to any number of object instances
  */
 @SpringComponent
 @Scope("prototype")
-public class TemperatureComponent extends AbstractWeatherComponent {
+public class TemperatureComponent extends AbstractLocationComponent {
 
     private Label type;
     private Label value;
@@ -61,7 +61,7 @@ public class TemperatureComponent extends AbstractWeatherComponent {
     }
 
     @Override
-    public void setWeatherData(WeatherData data){
+    public void setLocationData(LocationData data){
         setLocationData(data.getLocation(), data.getLatitude() , data.getLongitude());
 
         value.setValue(data.getValue().toString());

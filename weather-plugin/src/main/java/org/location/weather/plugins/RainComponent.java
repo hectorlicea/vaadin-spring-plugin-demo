@@ -1,17 +1,17 @@
-package org.weather.plugins;
+package org.location.weather.plugins;
 
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
-import org.weather.plugin.AbstractWeatherComponent;
-import org.weather.plugin.WeatherComponent;
-import org.weather.data.WeatherData;
+import org.location.plugin.AbstractLocationComponent;
+import org.location.plugin.LocationComponent;
+import org.location.data.LocationData;
 
 /**
- * {@link WeatherComponent} implementation to show 'rain' weather data
+ * {@link LocationComponent} implementation to show 'rain' weather data
  */
-public class RainComponent extends AbstractWeatherComponent {
+public class RainComponent extends AbstractLocationComponent {
     private Label type;
     private Label value;
 
@@ -39,7 +39,7 @@ public class RainComponent extends AbstractWeatherComponent {
     }
 
      @Override
-    public void setWeatherData(WeatherData data){
+    public void setLocationData(LocationData data){
         setLocationData(data.getLocation(), data.getLatitude() , data.getLongitude());
         value.setValue(data.getValue().toString());
     }
