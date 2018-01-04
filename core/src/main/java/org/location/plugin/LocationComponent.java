@@ -4,7 +4,7 @@ import com.vaadin.ui.Component;
 import org.location.data.LocationData;
 
 /**
- * Weather component interface
+ * Location component interface
  */
 public interface LocationComponent extends Component {
 
