@@ -5,7 +5,7 @@ This demo implements a "pluggable" [Vaadin](https://vaadin.com) application with
 ## Building the demo
 ```
 git clone https://github.com/hectorlicea/vaadin-spring-plugin-demo.git
-cd vaadin-spring-plugin-parent
+cd vaadin-spring-plugin-demo
 mvn clean install
 ```
 
