@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>org.weather</groupId>
-	<artifactId>vaadin-spring-plugin-parent</artifactId>
+	<artifactId>vaadin-spring-plugin-demo</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
