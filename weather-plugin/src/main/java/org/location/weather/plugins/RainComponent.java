@@ -4,14 +4,13 @@ import com.vaadin.icons.VaadinIcons;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
-import org.location.plugin.AbstractLocationComponent;
 import org.location.plugin.LocationComponent;
 import org.location.data.LocationData;
 
 /**
  * {@link LocationComponent} implementation to show 'rain' weather data
  */
-public class RainComponent extends AbstractLocationComponent {
+public class RainComponent extends LocationComponent {
     private Label type;
     private Label value;
 

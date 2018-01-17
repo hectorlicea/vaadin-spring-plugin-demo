@@ -1,5 +1,6 @@
 package org.location.plugin;
 
+import com.vaadin.ui.Component;
 import org.location.data.LocationData;
 import org.springframework.plugin.core.Plugin;
 
@@ -11,7 +12,7 @@ public interface LocationPlugin extends Plugin<String> {
      * Return component
      *
      * @param data Location data
-     * @return {@link LocationComponent}
+     * @return {@link Component}
      */
-    LocationComponent getComponent(LocationData data);
+    Component getComponent(LocationData data);
 }

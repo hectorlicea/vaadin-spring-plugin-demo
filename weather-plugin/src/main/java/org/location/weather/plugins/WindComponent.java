@@ -5,13 +5,12 @@ import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 import org.location.data.LocationData;
-import org.location.plugin.AbstractLocationComponent;
 import org.location.plugin.LocationComponent;
 
 /**
  * {@link LocationComponent} implementation to show 'wind' weather data.
  */
-public class WindComponent extends AbstractLocationComponent {
+public class WindComponent extends LocationComponent {
     private Label type;
     private Label value;
 

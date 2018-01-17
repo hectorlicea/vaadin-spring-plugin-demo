@@ -5,7 +5,6 @@ import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.spring.annotation.SpringComponent;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
-import org.location.plugin.AbstractLocationComponent;
 import org.location.plugin.LocationComponent;
 import org.location.data.LocationData;
 import org.springframework.context.annotation.Scope;
@@ -17,7 +16,7 @@ import org.springframework.context.annotation.Scope;
  */
 @SpringComponent
 @Scope("prototype")
-public class TemperatureComponent extends AbstractLocationComponent {
+public class TemperatureComponent extends LocationComponent {
 
     private Label type;
     private Label value;

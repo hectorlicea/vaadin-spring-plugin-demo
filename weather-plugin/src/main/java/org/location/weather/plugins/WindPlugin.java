@@ -16,7 +16,7 @@ public class WindPlugin implements LocationPlugin {
     }
 
     @Override
-    public LocationComponent getComponent(LocationData data) {
+    public com.vaadin.ui.Component getComponent(LocationData data) {
         LocationComponent component = new WindComponent();
         component.setLocationData(data);
         return component;

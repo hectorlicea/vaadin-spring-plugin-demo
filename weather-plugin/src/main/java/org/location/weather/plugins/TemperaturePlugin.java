@@ -23,7 +23,7 @@ public class TemperaturePlugin implements LocationPlugin {
     }
 
     @Override
-    public LocationComponent getComponent(LocationData data) {
+    public com.vaadin.ui.Component getComponent(LocationData data) {
         // ApplicationContext return new instance of TemperatureComponent bean
         TemperatureComponent temperature = context.getBean(TemperatureComponent.class);
         temperature.setLocationData(data);

@@ -16,7 +16,7 @@ public class RainPlugin  implements LocationPlugin {
     }
 
     @Override
-    public LocationComponent getComponent(LocationData data) {
+    public com.vaadin.ui.Component getComponent(LocationData data) {
         LocationComponent component = new RainComponent();
         component.setLocationData(data);
         return component;

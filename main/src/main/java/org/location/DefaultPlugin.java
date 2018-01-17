@@ -1,6 +1,6 @@
 package org.location;
 
-import org.location.plugin.AbstractLocationComponent;
+import com.vaadin.ui.Component;
 import org.location.plugin.LocationComponent;
 import org.location.plugin.LocationPlugin;
 import org.location.data.LocationData;
@@ -15,7 +15,7 @@ public class DefaultPlugin implements LocationPlugin {
     }
 
     @Override
-    public LocationComponent getComponent(LocationData data) {
+    public Component getComponent(LocationData data) {
         LocationComponent component = new Default();
         component.setLocationData(data);
         return component;
@@ -24,7 +24,7 @@ public class DefaultPlugin implements LocationPlugin {
     /**
      * {@link LocationComponent} implementation to show location data
      */
-    private class Default extends AbstractLocationComponent {
+    private class Default extends LocationComponent {
 
         public Default(){
             super();
