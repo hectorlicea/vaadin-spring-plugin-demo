@@ -23,34 +23,21 @@ All data show with default plugin.
 
 **1. Stop the application**
 
-**2. Create folder plugin. For example in `/opt`**
+**2. Create plugins folder. For example in `/opt`**
 ```
 mkdir /opt/plugins
 ```
 
-**3. Copy `weather-plugin.jar` file to folder plugins.**
+**3. Copy `weather-plugin.jar` file to plugins folder.**
 ```
 cp weather-plugin/target/weather-plugin.jar /opt/plugins
 ```
 
-**4. Edit `loader.properties` in `main` project**
+**4. Start `main` application with loader.path parameter with the name of plugins folder**
 ```
-nano app-main/src/main/resources/loader.properties
+java -Dloader.path=/opt/plugins -jar main/target/main.jar
 ```
-**5. In `loader.path` property, setting value with plugins folder and save the change**
-```
-loader.path = /opt/plugins
-```
-**6. Recompile `main` project**
-```
-cd main
-mvn clean install
-```
-**7. Start `main` application**
-```
-java -jar target/main.jar
-```
-**8. Start you browser with <http://localhost:8080>**
+**5. Start you browser with <http://localhost:8080>**
 
 weather data show with plugin 
 
