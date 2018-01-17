@@ -33,7 +33,7 @@ mkdir /opt/plugins
 cp weather-plugin/target/weather-plugin.jar /opt/plugins
 ```
 
-**4. Start `main` application with the plugins folder name in `loader.path` parameter with**
+**4. Start `main` application with the plugins folder name in `loader.path` parameter**
 ```
 java -Dloader.path=/opt/plugins -jar main/target/main.jar
 ```
